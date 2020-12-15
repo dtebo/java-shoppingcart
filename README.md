@@ -36,41 +36,41 @@ You are to start with the initial application provided. To find out the endpoint
 
 ## Instructions
 
-* [ ] Please fork and clone this repository.
-* [ ] This repository does have a starter project, so you must start with that application inside of the cloned repository folder. Regularly commit and push your code as appropriate.
-* [ ] A data.sql file has been provided with seed data. You can use this class directly or modify it to fit your models. However, the data found in the file is the seed data to use!
-* [ ] Note that all of the users' passwords are "LambdaLlama".
-* [ ] Note that For the final project, passwords in the data.sql file will need to be converted to BCrypt! To convert Bcrypt, you can use the website [https://bcrypt-generator.com/](https://bcrypt-generator.com/). Once you have the BCrypt string, you will replace LambdaLlama with that BCrypt string.
+* [x] Please fork and clone this repository.
+* [x] This repository does have a starter project, so you must start with that application inside of the cloned repository folder. Regularly commit and push your code as appropriate.
+* [x] A data.sql file has been provided with seed data. You can use this class directly or modify it to fit your models. However, the data found in the file is the seed data to use!
+* [x] Note that all of the users' passwords are "LambdaLlama".
+* [x] Note that For the final project, passwords in the data.sql file will need to be converted to BCrypt! To convert Bcrypt, you can use the website [https://bcrypt-generator.com/](https://bcrypt-generator.com/). Once you have the BCrypt string, you will replace LambdaLlama with that BCrypt string.
 
 ### MVP
 
-* [ ] Add OAuth2 Security to the application
-  * [ ] Add the necessary dependencies
-  * [ ] Update User model as appropriate
-  * [ ] Add findByName to the User Service with associated repository entry
-  * [ ] Add the necessary helper functions
-  * [ ] Add the SecurityUserService service
-  * [ ] Add and update the necessary configuration files
-* [ ] The initial endpoints are affected by security as follows
-  * [ ] Only admins can access routes /roles/**
-  * [ ] Only admins can access routes /products/**
-  * [ ] Only admins can access routes
-    * [ ] POST /users/user
-    * [ ] DELETE /users/user/{id}
-    * [ ] PUT /users/user/{id}
-    * [ ] GET /users/user/name/{userName}
-    * [ ] GET /users/user/name/like/{userName}
-    * [ ] GET /users/user
-    * [ ] PATCH /users/user/{id}
-    * [ ] GET /users/user/{userId} 
-  * [ ] For the routes /carts/**
-    * [ ] Remove the user/{userid} path variable from all the routes
-    * [ ] Use the authenticated as the user to work with
-* [ ] Add new endpoints
-  * [ ] http://localhost:2019/users/myinfo
-    * [ ] Any authenticated user can access this endpoint and it will return the authenticated users information
-  * [ ] http://localhost:2019/logout
-    * [ ] Allows a user to logout of the system by removing their access token from the token store
+* [x] Add OAuth2 Security to the application
+  * [x] Add the necessary dependencies
+  * [x] Update User model as appropriate
+  * [x] Add findByName to the User Service with associated repository entry
+  * [x] Add the necessary helper functions
+  * [x] Add the SecurityUserService service
+  * [x] Add and update the necessary configuration files
+* [x] The initial endpoints are affected by security as follows
+  * [x] Only admins can access routes /roles/**
+  * [x] Only admins can access routes /products/**
+  * [X] Only admins can access routes
+    * [x] POST /users/user
+    * [x] DELETE /users/user/{id}
+    * [x] PUT /users/user/{id}
+    * [x] GET /users/user/name/{userName}
+    * [x] GET /users/user/name/like/{userName}
+    * [x] GET /users/user
+    * [x] PATCH /users/user/{id}
+    * [x] GET /users/user/{userId} 
+  * [x] For the routes /carts/**
+    * [x] Remove the user/{userid} path variable from all the routes
+    * [x] Use the authenticated as the user to work with
+* [x] Add new endpoints
+  * [x] http://localhost:2019/users/myinfo
+    * [x] Any authenticated user can access this endpoint and it will return the authenticated users information
+  * [x] http://localhost:2019/logout
+    * [x] Allows a user to logout of the system by removing their access token from the token store
   * [ ] Address CORS
 
 ### Stretch Goals

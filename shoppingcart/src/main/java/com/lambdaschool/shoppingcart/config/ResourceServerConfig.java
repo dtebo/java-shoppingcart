@@ -32,7 +32,12 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 .antMatchers(HttpMethod.POST, "/users/**").hasAnyRole("ADMIN")
                 .antMatchers(HttpMethod.DELETE, "/users/**").hasAnyRole("ADMIN")
                 .antMatchers(HttpMethod.PUT, "/users/**").hasAnyRole("ADMIN")
-                .antMatchers("/oauth/revoke-token", "/logout").authenticated()
+                .antMatchers("/roles/**").hasAnyRole("ADMIN")
+                .antMatchers("/products/**").hasAnyRole("ADMIN")
+                .antMatchers("/carts/**").hasAnyRole("ADMIN")
+                .antMatchers("/oauth/revoke-token",
+                        "/logout",
+                        "/users/myinfo").authenticated()
                 .and()
                 .exceptionHandling()
                 .accessDeniedHandler(new OAuth2AccessDeniedHandler());
@@ -40,6 +45,8 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
         http.csrf().disable();
 
         http.headers().frameOptions().disable();
+
+        http.logout().disable();
 
         super.configure(http);
     }
