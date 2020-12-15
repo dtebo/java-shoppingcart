@@ -40,7 +40,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
         http.csrf().disable();
 
         http.headers().frameOptions().disable();
-        
+
         super.configure(http);
     }
 }
