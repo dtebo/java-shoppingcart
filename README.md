@@ -71,7 +71,7 @@ You are to start with the initial application provided. To find out the endpoint
     * [x] Any authenticated user can access this endpoint and it will return the authenticated users information
   * [x] http://localhost:2019/logout
     * [x] Allows a user to logout of the system by removing their access token from the token store
-  * [ ] Address CORS
+  * [x] Address CORS
 
 ### Stretch Goals
 

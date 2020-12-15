@@ -42,8 +42,6 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 .exceptionHandling()
                 .accessDeniedHandler(new OAuth2AccessDeniedHandler());
 
-        http.csrf().disable();
-
         http.headers().frameOptions().disable();
 
         http.logout().disable();
